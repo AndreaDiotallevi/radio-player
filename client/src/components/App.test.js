@@ -17,4 +17,10 @@ describe("App", () => {
     const img = findByTestAttr(wrapper, "stream-image");
     expect(img.length).toEqual(1);
   });
+
+  test("renders the stream's name", () => {
+    const wrapper = shallow(<App />);
+    const name = findByTestAttr(wrapper, "stream-name");
+    expect(name.length).toEqual(1);
+  });
 });

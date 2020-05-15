@@ -12,6 +12,7 @@ const App = () => {
         alt="radio"
         height="500"
       ></img>
+      <p data-test="stream-name">{streams[selectedStreamIndex].name}</p>
     </div>
   );
 };
