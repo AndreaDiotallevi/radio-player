@@ -13,6 +13,14 @@ const App = () => {
         height="500"
       ></img>
       <p data-test="stream-name">{streams[selectedStreamIndex].name}</p>
+      <button data-test="stream-button">Play</button>
+      <ul data-test="stream-button-list">
+        {streams.map((stream) => (
+          <li key={stream.id}>
+            <button value={stream.id}>{stream.name}</button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

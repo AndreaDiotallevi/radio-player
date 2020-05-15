@@ -23,4 +23,10 @@ describe("App", () => {
     const name = findByTestAttr(wrapper, "stream-name");
     expect(name.length).toEqual(1);
   });
+
+  test("renders the stream button list", () => {
+    const wrapper = shallow(<App />);
+    const list = findByTestAttr(wrapper, "stream-button-list");
+    expect(list.length).toEqual(1);
+  });
 });
