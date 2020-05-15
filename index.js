@@ -12,4 +12,8 @@ const io = socketIo(server);
 
 io.on("connection", (socket) => {
   console.log("Made socket connection", socket.id);
+
+  socket.on("streamSelected", (data) => {
+    io.sockets.emit("streamSelected", data);
+  });
 });
