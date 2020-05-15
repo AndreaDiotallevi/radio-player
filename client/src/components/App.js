@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import socketIOClient from "socket.io-client";
 import streams from "../utils/streams";
+
+const socket = socketIOClient.connect("http://localhost:5000");
 
 const App = () => {
   const [selectedStreamIndex, setSelectedStreamIndex] = useState(0);
